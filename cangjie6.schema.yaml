@@ -76,6 +76,10 @@ extended_char:
 speller:
   alphabet: zyxwvutsrqponmlkjihgfedcba
   delimiter: " '"
+# 設置最長編碼
+  max_code_length: 5
+# 唯一碼自動上屏
+  auto_select: true
 
 translator:
   dictionary: &dict
@@ -86,6 +90,8 @@ translator:
 # 不想自動調頻的話，將上條中「true」改爲「false」
   enable_sentence: false
   sentence_over_completion: true
+# 逐漸提示
+  enable_completion: true
   enable_encoder: true
 # 不想自動組詞〔記錄輸入過的詞，然後變成五碼固定詞〕的話可以把上條中「true」改爲「false」
   encode_commit_history: true
