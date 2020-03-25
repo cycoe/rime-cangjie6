@@ -79,12 +79,12 @@ speller:
 
 translator:
   dictionary: &dict
-    cangjie6.extended
+    cangjie6.extsimp
 # 若不需鍵詞，請刪去上條中之「.extended」
 # 若需簡體詞，请將上條中之「.extended」改爲「.extsimp」
   enable_user_dict: true
 # 不想自動調頻的話，將上條中「true」改爲「false」
-  enable_sentence: true
+  enable_sentence: false
   sentence_over_completion: true
   enable_encoder: true
 # 不想自動組詞〔記錄輸入過的詞，然後變成五碼固定詞〕的話可以把上條中「true」改爲「false」
