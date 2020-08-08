@@ -12,7 +12,7 @@ schema:
     第六代倉頡輸入法
     碼表由雪齋、惜緣和crazy4u整理
   dependencies:
-    - luna_pinyin
+    - pinyin_simp
     - jyutping
 
 switches:
@@ -77,9 +77,9 @@ speller:
   alphabet: zyxwvutsrqponmlkjihgfedcba
   delimiter: " '"
 # 設置最長編碼
-  max_code_length: 5
+  # max_code_length: 5
 # 唯一碼自動上屏
-  auto_select: true
+  # auto_select: true
 
 translator:
   dictionary: &dict
@@ -88,7 +88,7 @@ translator:
 # 若需簡體詞，请將上條中之「.extended」改爲「.extsimp」
   enable_user_dict: true
 # 不想自動調頻的話，將上條中「true」改爲「false」
-  enable_sentence: false
+  enable_sentence: true
   sentence_over_completion: true
 # 逐漸提示
   enable_completion: true
@@ -104,7 +104,7 @@ translator:
 
 pinyin:
   tag: pinyin
-  dictionary: luna_pinyin
+  dictionary: pinyin_simp
   prefix: P
 # 漢語拼音輸入以〔大寫〕「P」引導
   suffix: ;
@@ -147,7 +147,7 @@ pinyin_lookup:
   prefix: "`P"
 # 獨用漢語拼音反查在反查鍵「`」之後再鍵入〔大寫〕「P」
   suffix: ;
-  dictionary: luna_pinyin
+  dictionary: pinyin_simp
   preedit_format: *pinyin
   tips: 【漢拼反查】
   closing_tips: 【蒼頡】
